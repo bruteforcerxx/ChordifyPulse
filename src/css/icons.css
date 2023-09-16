@@ -1,0 +1,25 @@
+.icons-cont{
+   
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(252, 252, 252, 0.146);
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 7px 10px 7px 10px;
+}
+
+.icons{
+    height: 18px;
+    height: 18px;
+    margin-right: 20px
+}
+
+.icon-search{
+
+}
+
+.logo{
+    width: 25px;
+    height: auto
+}

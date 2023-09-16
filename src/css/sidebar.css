@@ -1,0 +1,103 @@
+.side-section{
+    width: 15vw;
+    height: auto;
+    padding: 2vh 0vw 0vh 3vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    background-color: black;
+}
+
+.logo-circle{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1ecf73;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.title-cont{
+    margin-left: 20px;
+}
+
+.title{
+    font-size: 20px;
+    margin-bottom: -5px;
+    padding: 0;
+    color: white;
+}
+
+.sub-title{
+    font-size: 17px;
+    font-weight: 200;
+    margin-top: -5px;
+    padding: 0;
+    color: white;
+}
+
+
+.menu-list{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 100%;
+    
+}
+
+.menu-list div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: -10px;
+    transition: ease-in-out .2s;
+    height: 60px;
+}
+
+.menu-list div h6{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.199);
+    transition: ease-in-out .2s;
+    min-width: 100px;
+    
+}
+
+.menu-list div:hover{
+    scale: 1.2;
+    
+}
+
+.menu-list div:hover h6{
+    color: white;
+    font-weight: 700;
+}
+
+.menu-list div h6:active{
+    color: white;
+}
+
+.active{
+    color: white!important;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .side-section{
+        display: none
+    }
+
+}

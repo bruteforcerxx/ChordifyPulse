@@ -1,0 +1,162 @@
+@font-face {
+  font-family: Audio;
+  src: url(fonts/Audiowide-Regular.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: KoKo;
+  src: url(fonts/KoHo-Bold.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ARajdhani-Bold;
+  src: url(fonts/Rajdhani-Bold.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ARajdhani-Medium;
+  src: url(fonts/Rajdhani-Medium.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: ARajdhani-Light;
+  src: url(fonts/Rajdhani-Light.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: LexendTera;
+  src: url(fonts/LexendTera.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: KoKo-r;
+  src: url(fonts/KoHo-Regular.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: KoKo-el;
+  src: url(fonts/KoHo-ExtraLight.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: KoKo-m;
+  src: url(fonts/KoHo-Medium.ttf) format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap
+}
+
+html body{
+  background-color: #000000;
+  display: fixed;
+  
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  background-color: #000000;
+  display: fixed;
+  top: 0;
+}
+
+.vl {
+  border-left: .5px solid rgba(255, 255, 255, 0.133);
+  margin-left: 18vw;
+  position: fixed;
+  height: 100vh;
+  top: 0
+}
+
+
+hr{
+  height: 0px;
+  border-color: rgba(255, 255, 255, 0.071);
+
+}
+
+
+.test{
+  z-index: 0;
+  
+}
+
+.cssbuttons-io-button {
+  background: #A370F0;
+  color: white;
+  font-family: inherit;
+  padding: 0.15em;
+  padding-left: 3.2em;
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  margin: 10px 0% 0px 10%;
+
+  width: 100%;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8em;
+  width: 1.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}

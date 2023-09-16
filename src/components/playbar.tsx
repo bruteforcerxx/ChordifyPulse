@@ -1,24 +1,15 @@
-const song_list = [
-  {
-    artist: "Omah Lay",
-    song: "Reason",
-    album: "Single",
-    time: "2:27",
-    cover: "/cover/1.jpg",
-    progress: "1.30",
-  },
-];
+ 
 
 //@ts-ignore
 function PlayBar(props) {
-  const playBar = song_list[0];
+ 
 
   function secondsToTime(seconds: any) {
-    const hours = Math.floor(seconds / 3600);
+    //const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const remainingSeconds = seconds % 60;
 
-    const formattedHours = String(hours).padStart(2, "0");
+ 
     const formattedMinutes = String(minutes).padStart(1, "0");
     const formattedSeconds = String(remainingSeconds).padStart(2, "0");
 
@@ -56,6 +47,7 @@ function nextSong() {
 
     if (props.playingQueue) {
       if (props.queueTracker + 1 < props.stateQueue.length) {
+        //@ts-ignore
         props.setQueueTracker((prevCounter) => prevCounter + 1);
         
       } else {
@@ -69,6 +61,7 @@ function prevSong() {
 
     if (props.playingQueue) {
       if (props.queueTracker + 1 < props.stateQueue.length) {
+        //@ts-ignore
         props.setQueueTracker((prevCounter) => prevCounter + 1);
         console.log(
           "playing...",

@@ -1,13 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import {
-  allSongs,
+ 
   featured,
   Queue,
-  playLists,
-  featuredGenres,
+ 
 } from "./musicDb";
 import ReactHowler from "react-howler";
-import axios from "axios";
+ 
 
 import "./main.css";
 import "./index.css";
@@ -24,15 +23,7 @@ import CenterSection from "./components/centersection";
 import SideBar from "./components/sidebar";
 import PlayBar from "./components/playbar";
 
-const playbar = {
-  artist: "Omah Lay",
-  song: "Reason",
-  album: "Single",
-  time: "2:27",
-  cover: "/cover/1.jpg",
-  file: "/music/omhlayreason.mp3",
-};
-
+ 
 const CLIENT_ID = "cd60551b4ec04fcd81c5ee4e6180ba21";
 const CLIENT_SECRET = "f4aeb8a2463f47b293c112b2219fbff7";
 const TOKEN_REFRESH_INTERVAL = 3500000; // 3500000 milliseconds // 58mins
@@ -46,14 +37,11 @@ function Composer() {
     localStorage.setItem("queue", JSON.stringify(Queue));
     importedQueue = JSON.parse(localStorage.getItem("queue") || "[]");
   }
-  const playPauseControler = featured.map(() => {});
 
-  const [playBar, setPlayBar] = useState();
-  const [progress, setProgress] = useState();
   const [currentSong, setCurrentSong] = useState(["none"]);
   const [isSongPlaying, setIsSongPlaying] = useState(false);
   const [featuredSongsList, setFeaturedSongsList] = useState(featured);
-  const [previous, setPrevious] = useState(0);
+  
   const [playSong, setPlaySong] = useState(false);
   const [accessToken, setAccessToken] = useState("");
   const [changeSong, setChangeSong] = useState(true);
@@ -85,9 +73,8 @@ function Composer() {
     // Check if the token is already stored in local storage
     const storedToken = localStorage.getItem("accessToken");
     //@ts-ignore
-    const storedTokenTime = parseInt(
-      localStorage.getItem("accessTokenTime"),
-      10
+    const storedTokenTime = Number(
+      localStorage.getItem("accessTokenTime")
     );
 
     const currentTime = Date.now();

@@ -15,6 +15,8 @@ function AudioRecorder(props) {
   const audioStreamRef = useRef<MediaStream | null>(null);
   const recordingTimeoutRef = useRef<number | null>(null);
 
+  console.log(audioChunks)
+  console.log(key)
 
 //@ts-ignore
 async function search(title){
@@ -34,6 +36,7 @@ async function search(title){
      .then(data => {console.log(data.tracks.items[0].album);
                    props.setSpotifyImage(data.tracks.items[0].album.images[1].url)}
           )
+          console.log(TrackID)
 }
 
 const initializeRecorder = async () => {

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Queue } from "../musicDb";
+ 
 
 const playbar = {
   artist: "Omah Lay",

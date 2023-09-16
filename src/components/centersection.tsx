@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Howl, Howler } from "howler";
+ 
 import AudioRecorder from "./recorder";
 
 //@ts-ignore
@@ -8,42 +8,8 @@ function CenterSection(props) {
   const [shift, setShift] = useState(false);
   const [shiftClose, setShiftClose] = useState(false);
   const [shiftIndex, setShiftIndex] = useState(null);
-  const path =
-    "M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z";
-  //@ts-ignore
-  function Play(song) {
-    const src = song_list.map((song) => {
-      return song.file;
-    });
-
-    console.log(src);
-
-    const src2 = ["/music/omhlayreason.mp3", "/music/omhlayreason.mp3"];
-
-    new Howl({
-      src: src2,
-      html5: true,
-    }).play();
-    /*var music1 = music.play()
-        var music2 = music.play()
-
-        music.fade(1, 0, 1000, music1);
-        music.rate(1.5, music2);
 
 
-        var otherMusic = src.map(song => {
-            return music.play()
-        })
-        //var music2 = music.play()
-
-        console.log(otherMusic)
-
-        music.fade(1, 0, 1000, music1);
-
-        for(let i = 0; i < otherMusic.length; i++){
-            music.rate(1.5, otherMusic[i]);
-        }*/
-  }
 
   const wave = () => {
     var Arr = [];
@@ -61,11 +27,11 @@ const getDuration = (e, index) => {
 };
 
 function secondsToTime(seconds: any) {
-    const hours = Math.floor(seconds / 3600);
+    //const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const remainingSeconds = seconds % 60;
 
-    const formattedHours = String(hours).padStart(2, "0");
+    //const formattedHours = String(hours).padStart(2, "0");
     const formattedMinutes = String(minutes).padStart(1, "0");
     const formattedSeconds = String(remainingSeconds).padStart(2, "0");
 
@@ -80,6 +46,8 @@ function addToQueue(index:number){
   console.log(queue)
   props.setStateQueue(queue)
   console.log('props.stateQueue',props.stateQueue)
+
+  //@ts-ignore
   props.setKey(prev => prev  + 1)
 
 }

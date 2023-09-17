@@ -332,7 +332,7 @@ function addToQueue(index:number){
                         </button>
                         <button className="cssbuttons-io-button">
                           {" "}
-                          Get started
+                          View More
                           <div className="icon">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
